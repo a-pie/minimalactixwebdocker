@@ -1,0 +1,6 @@
+sudo docker build -t actix-web-container-name .
+sudo docker run -p 8080:8080 -t actix-web-container-name
+curl localhost:8080/hello
+
+To remove dangling images:
+sudo docker rmi $(sudo docker images -f "dangling=true" -q)
